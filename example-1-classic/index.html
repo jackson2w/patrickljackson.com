@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rev. Patrick Ian Jackson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1c2a3a; --navy-deep:#141f2b; --cream:#f6f1e7; --cream-2:#efe7d6;
+    --gold:#a4762f; --gold-soft:#c69b54; --ink:#2a2620; --muted:#6b6557;
+    --rule:#d8cdb8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:19px}
+  h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;letter-spacing:.01em;line-height:1.12}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+  .smallcaps{font-variant:small-caps;letter-spacing:.18em;text-transform:lowercase;font-size:.72rem;color:var(--gold)}
+
+  /* Header */
+  header{background:var(--navy);color:var(--cream)}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:1120px;margin:0 auto}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.4rem;letter-spacing:.04em}
+  nav a{margin-left:30px;text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#cdd6e0;transition:color .2s}
+  nav a:hover{color:#fff}
+  .nav-links{display:flex}
+  @media(max-width:740px){.nav-links{display:none}}
+
+  /* Hero */
+  .hero{background:var(--navy);color:var(--cream);border-bottom:1px solid #2c3c4f}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:72px 0 84px}
+  .hero .smallcaps{color:var(--gold-soft)}
+  .hero h1{font-size:4.4rem;color:#fff;margin:.2em 0 .35em}
+  .hero h1 .thin{display:block;font-size:1.5rem;font-style:italic;font-weight:400;color:#c9b790;letter-spacing:.06em;margin-top:.5em}
+  .hero p.lede{font-size:1.18rem;color:#d7ddE4;max-width:30em;margin-bottom:2em}
+  .btn{display:inline-block;padding:13px 30px;border:1px solid var(--gold-soft);color:#f3e9d6;text-decoration:none;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;transition:.25s}
+  .btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+  .btn+.btn{margin-left:14px}
+  .portrait-frame{position:relative;padding:14px;background:linear-gradient(160deg,#26384a,#1a2735);border:1px solid #33485d}
+  .portrait-frame img{width:100%;display:block;filter:saturate(.96)}
+  .portrait-frame::after{content:"";position:absolute;inset:14px;border:1px solid rgba(198,155,84,.45);pointer-events:none}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px;padding:54px 0}.hero h1{font-size:3.2rem}}
+
+  /* Section frame */
+  section{padding:88px 0}
+  .section-head{text-align:center;max-width:42em;margin:0 auto 56px}
+  .section-head h2{font-size:2.7rem;color:var(--navy);margin:.25em 0}
+  .section-head .rule{width:56px;height:2px;background:var(--gold);margin:18px auto 0}
+  .alt{background:var(--cream-2)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .about-grid p{margin-bottom:1.1em;color:#48433a}
+  .about-grid p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.6rem;float:left;line-height:.78;margin:.06em .14em 0 0;color:var(--gold)}
+  .facts{border-left:2px solid var(--rule);padding-left:30px}
+  .facts h3{font-size:1.05rem;font-variant:small-caps;letter-spacing:.1em;color:var(--gold);margin-bottom:14px}
+  .facts dl{display:grid;grid-template-columns:auto;gap:14px}
+  .facts dt{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .facts dd{font-size:1.05rem;color:var(--navy);margin-top:2px}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* Writing */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .card{background:#fff;border:1px solid var(--rule);padding:40px;position:relative}
+  .card .smallcaps{font-size:.68rem}
+  .card h3{font-size:1.9rem;color:var(--navy);margin:.3em 0 .5em}
+  .card p{color:#544f44;font-size:1.04rem;margin-bottom:1.2em}
+  .card blockquote{font-style:italic;color:var(--gold);border-left:2px solid var(--gold-soft);padding-left:18px;margin:1em 0;font-size:1.06rem}
+  .read{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}
+  .read:hover{color:var(--gold)}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+  /* Sermons */
+  .sermon-list{max-width:760px;margin:0 auto;border-top:1px solid var(--rule)}
+  .sermon{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:24px 4px;border-bottom:1px solid var(--rule);text-decoration:none;transition:padding-left .25s,background .25s}
+  .sermon:hover{padding-left:14px;background:rgba(164,118,47,.05)}
+  .sermon .t{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:var(--navy)}
+  .sermon .m{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+  /* Quote band */
+  .band{background:var(--navy);color:var(--cream);text-align:center}
+  .band .wrap{padding:78px 32px}
+  .band p{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-style:italic;line-height:1.4;max-width:18em;margin:0 auto;color:#eadfca}
+  .band .src{display:block;margin-top:24px;font-family:'EB Garamond';font-style:normal;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+
+  /* Contact */
+  .contact{text-align:center}
+  .contact h2{font-size:2.7rem;color:var(--navy)}
+  .contact p{max-width:30em;margin:14px auto 30px;color:#544f44}
+
+  footer{background:var(--navy-deep);color:#97a3b0;text-align:center;padding:40px 32px;font-size:.82rem;letter-spacing:.04em}
+  footer .brand{color:var(--cream);font-size:1.2rem;display:block;margin-bottom:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <span class="brand">Rev. Patrick&nbsp;Ian&nbsp;Jackson</span>
+    <div class="nav-links">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#writing">Writing</a>
+        <a href="#sermons">Sermons</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="smallcaps">Pastor · Author · Speaker</span>
+          <h1>Patrick Ian Jackson
+            <span class="thin">A ministry of the Word, with warmth and wit</span>
+          </h1>
+          <p class="lede">An ordained Baptist minister who came to the pulpit by way of Capitol Hill and the courtroom — preaching, writing, and walking with people toward the love of God.</p>
+          <a href="#writing" class="btn">Read his writing</a>
+          <a href="#sermons" class="btn">Hear him preach</a>
+        </div>
+        <div class="portrait-frame">
+          <img src="../assets/patrick-portrait.jpg" alt="Rev. Patrick Ian Jackson">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="smallcaps">About</span>
+      <h2>A long road to the pulpit</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>Rev. Patrick Ian Jackson hails from Bartlett, Tennessee, just northeast of Memphis — a place that gave him an enduring love of barbecue, SEC football, and vibrant, spirit-filled worship. He earned a B.A. from Harvard in 1992 and a J.D. from the University of Wisconsin Law School in 2001, then spent seven years as a Legislative Assistant on Capitol Hill and nearly six years practicing law in Columbus, Ohio.</p>
+        <p>After years in law and politics, he sensed God calling him to do more with his gifts. Through prayer and counsel he accepted his call to ministry in 2013, earning his M.Div. with honors from Andover Newton Theological School in 2017. He was ordained at Richmond's First Baptist Church in 2019, and went on to serve five years as Pastor of First Baptist Church–Church of the Brethren in Cedar Rapids, Iowa.</p>
+        <p>His passions include the Bible, music, writing, mystery novels, travel, and encouraging others to find the humor in life. His ultimate desire is to use his God-given gifts in creative ways to reach people with the gospel of Jesus Christ.</p>
+      </div>
+      <div class="facts">
+        <h3>At a glance</h3>
+        <dl>
+          <div><dt>Ordination</dt><dd>Baptist minister, ordained 2019</dd></div>
+          <div><dt>Education</dt><dd>Harvard, B.A. · Wisconsin Law, J.D. · Andover Newton, M.Div. (honors)</dd></div>
+          <div><dt>Pastorate</dt><dd>First Baptist Church–Church of the Brethren, Cedar Rapids (2020–2025)</dd></div>
+          <div><dt>Author</dt><dd><em>Chosen By Love</em>, a devotional</dd></div>
+          <div><dt>Earlier life</dt><dd>Capitol Hill legislative aide · attorney</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="smallcaps">Writing</span>
+      <h2>Words for the journey</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="smallcaps">Devotional · Book</span>
+        <h3>Chosen By Love</h3>
+        <p>A self-published devotional pairing everyday stories with Scripture. In “Day 27 — See It,” Patrick turns to actor Wendell Pierce, who rebuilt homes and opened markets in Katrina-ravaged New Orleans:</p>
+        <blockquote>“Where other companies see risk, I see reward.” … I believe that is what God is calling on each of us to have: vision to help those in need.</blockquote>
+        <a class="read" href="https://www.amazon.com/Chosen-Love-earth-shattering-mind-blowing-life-changing/dp/1494755572/" target="_blank" rel="noopener">Find the book →</a>
+      </article>
+      <article class="card">
+        <span class="smallcaps">Pastoral Letters · “Love Notes”</span>
+        <h3>Love Notes to the Congregation</h3>
+        <p>Each week Patrick wrote his church a “Love Note” — warm, funny meditations that found the gospel in ordinary places. One begins with a complaint about the Food Network:</p>
+        <blockquote>Remember that you are God's special, one-of-a-kind, precious jewel of the highest value … loved beyond measure.</blockquote>
+        <a class="read" href="#contact">Request the collection →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <p>“Behold, I am doing a new thing; now it springs forth, do you not perceive it?”</p>
+    <span class="src">Isaiah 43:19</span>
+  </div>
+</div>
+
+<section id="sermons">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="smallcaps">Sermons</span>
+      <h2>Hear him preach</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="sermon-list">
+      <a class="sermon" href="https://www.youtube.com/watch?v=0F-TCjO60oY&t=2191s" target="_blank" rel="noopener">
+        <span class="t">Sunday Worship &amp; Sermon</span>
+        <span class="m">FBC–COB, Cedar Rapids · 2025</span>
+      </a>
+      <a class="sermon" href="https://vimeo.com/410704971" target="_blank" rel="noopener">
+        <span class="t">Waiting</span>
+        <span class="m">Richmond's First Baptist</span>
+      </a>
+      <a class="sermon" href="https://vimeo.com/382186514" target="_blank" rel="noopener">
+        <span class="t">Gifts I'd Like to Give: Joy</span>
+        <span class="m">Richmond's First Baptist</span>
+      </a>
+      <a class="sermon" href="https://vimeo.com/333406915" target="_blank" rel="noopener">
+        <span class="t">Loose the Chains</span>
+        <span class="m">Richmond's First Baptist</span>
+      </a>
+      <a class="sermon" href="https://richmondsftf.wordpress.com/2018/08/28/called-to-prepare/" target="_blank" rel="noopener">
+        <span class="t">Called to Prepare — a profile</span>
+        <span class="m">Pastoral Residency feature</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt contact">
+  <div class="wrap">
+    <span class="smallcaps">Contact</span>
+    <h2>Invite Patrick</h2>
+    <p>For preaching, speaking, pulpit supply, or pastoral inquiries, Patrick would be glad to hear from you.</p>
+    <a class="btn" style="color:var(--navy);border-color:var(--gold)" href="mailto:ianj70@gmail.com">ianj70@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <span class="brand">Rev. Patrick Ian Jackson</span>
+  Pastor · Author · Speaker — “To use my God-given gifts in creative ways to reach people with the gospel of Jesus Christ.”
+</footer>
+</body>
+</html>

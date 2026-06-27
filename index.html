@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrick Ian Jackson — Website Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--sand:#f4efe6;--paper:#fffdf9;--ink:#211c16;--soft:#5f574b;--line:#e0d7c6;--clay:#b4623f;--olive:#5a6149;--navy:#1c2a3a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .serif{font-family:'Newsreader',Georgia,serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+  header{text-align:center;padding:80px 28px 20px}
+  header .kicker{font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--clay)}
+  header h1{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.08;margin:16px 0 14px;letter-spacing:-.01em}
+  header p{color:var(--soft);max-width:48ch;margin:0 auto;font-size:1.1rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding:48px 0 30px}
+  @media(max-width:840px){.grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .22s,box-shadow .22s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(33,28,22,.14)}
+  .swatch{height:120px;display:flex;align-items:flex-end;padding:16px 20px}
+  .swatch span{font-family:'Newsreader',serif;font-style:italic;color:#fff;font-size:1.05rem;opacity:.95}
+  .s1{background:linear-gradient(135deg,#1c2a3a,#26384a)}
+  .s2{background:linear-gradient(135deg,#16130f 60%,#d6492f)}
+  .s3{background:linear-gradient(135deg,#5a6149,#b4623f)}
+  .body{padding:26px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .num{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}
+  .body h2{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem}
+  .body p{color:var(--soft);font-size:.96rem;flex:1}
+  .view{margin-top:8px;font-weight:600;font-size:.9rem;color:var(--ink)}
+  .view::after{content:" →"}
+  footer{text-align:center;padding:30px 28px 70px;color:var(--soft);font-size:.9rem}
+  .note{max-width:60ch;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 22px;font-size:.95rem;color:var(--soft)}
+</style>
+</head>
+<body>
+<header>
+  <span class="kicker">Website Concepts · For Review</span>
+  <h1 class="serif">Three directions for<br>Patrick Ian Jackson</h1>
+  <p>Each is a complete homepage built from Patrick's bio, writing, and sermons. Open any one, scroll the full page, and let us know which feels most like you.</p>
+</header>
+<div class="wrap">
+  <div class="grid">
+    <a class="card" href="example-1-classic/">
+      <div class="swatch s1"><span>Classic &amp; Traditional</span></div>
+      <div class="body">
+        <span class="num">Option 1</span>
+        <h2 class="serif">Classic</h2>
+        <p>Dignified and reverent — navy &amp; cream, elegant serif type, a framed portrait. Reads as established and timeless.</p>
+        <span class="view">View concept</span>
+      </div>
+    </a>
+    <a class="card" href="example-2-editorial/">
+      <div class="swatch s2"><span>Modern &amp; Editorial</span></div>
+      <div class="body">
+        <span class="num">Option 2</span>
+        <h2 class="serif">Editorial</h2>
+        <p>Bold and contemporary — magazine-style headlines, a terracotta accent, a striking dark writing feature. Energetic and current.</p>
+        <span class="view">View concept</span>
+      </div>
+    </a>
+    <a class="card" href="example-3-warm/">
+      <div class="swatch s3"><span>Warm &amp; Personal</span></div>
+      <div class="body">
+        <span class="num">Option 3</span>
+        <h2 class="serif">Warm</h2>
+        <p>Mission-forward and approachable — a credentials strip, a centered mission statement, and a warm, inviting palette.</p>
+        <span class="view">View concept</span>
+      </div>
+    </a>
+  </div>
+  <footer>
+    <div class="note">These are early concepts for feedback — copy, photography, and details will be refined once a direction is chosen.</div>
+  </footer>
+</div>
+</body>
+</html>
