@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rev. Patrick Ian Jackson</title>
+<meta name="description" content="Rev. Patrick Ian Jackson — an ordained Baptist minister who came to the pulpit by way of Capitol Hill and the courtroom. Preaching, writing, and speaking with warmth and wit.">
+<link rel="canonical" href="https://patrickljackson-mockups.pages.dev/example-1-classic/">
+<meta property="og:title" content="Rev. Patrick Ian Jackson — Pastor · Author · Speaker">
+<meta property="og:description" content="A ministry of the Word, with warmth and wit — preaching, writing, and walking with people toward the love of God.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://patrickljackson-mockups.pages.dev/example-1-classic/">
+<meta property="og:image" content="https://patrickljackson-mockups.pages.dev/assets/og.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -13,9 +20,11 @@
     --gold:#a4762f; --gold-soft:#c69b54; --ink:#2a2620; --muted:#6b6557;
     --rule:#d8cdb8;
   }
+  /* GRT — base 19px / measure 720px → line-height 30px (1.58) */
+  :root{--grt-lh-1:1.58}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:19px}
+  body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);background:var(--cream);line-height:var(--grt-lh-1);font-size:19px}
   h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;letter-spacing:.01em;line-height:1.12}
   a{color:inherit}
   .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
@@ -122,13 +131,14 @@
           <a href="#sermons" class="btn">Hear him preach</a>
         </div>
         <div class="portrait-frame">
-          <img src="../assets/patrick-portrait.jpg" alt="Rev. Patrick Ian Jackson">
+          <img src="../assets/patrick-portrait.webp" alt="Rev. Patrick Ian Jackson in a dark suit" width="700" height="814" fetchpriority="high" decoding="async">
         </div>
       </div>
     </div>
   </div>
 </header>
 
+<main>
 <section id="about">
   <div class="wrap">
     <div class="section-head">
@@ -229,6 +239,7 @@
     <a class="btn" style="color:var(--navy);border-color:var(--gold)" href="mailto:ianj70@gmail.com">ianj70@gmail.com</a>
   </div>
 </section>
+</main>
 
 <footer>
   <span class="brand">Rev. Patrick Ian Jackson</span>

@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Patrick Ian Jackson — Pastor · Author · Speaker</title>
+<meta name="description" content="Rev. Patrick Ian Jackson preaches, writes, and walks alongside people — reaching them with the love of God, creatively and with joy.">
+<link rel="canonical" href="https://patrickljackson-mockups.pages.dev/example-3-warm/">
+<meta property="og:title" content="Patrick Ian Jackson — Pastor · Author · Speaker">
+<meta property="og:description" content="Reaching people with the love of God — creatively, and with joy. Preaching, writing, and speaking.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://patrickljackson-mockups.pages.dev/example-3-warm/">
+<meta property="og:image" content="https://patrickljackson-mockups.pages.dev/assets/og.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,9 +22,11 @@
     --olive:#5a6149;     /* muted olive */
     --gold:#9a7b34;
   }
+  /* GRT — base 18px / measure 680px → line-height 29px (1.61) */
+  :root{--grt-lh-1:1.61}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--sand);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--sand);font-size:18px;line-height:var(--grt-lh-1);-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   .serif{font-family:'Newsreader',Georgia,serif}
   .wrap{max-width:1140px;margin:0 auto;padding:0 30px}
@@ -151,13 +160,14 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img src="../assets/patrick-portrait.jpg" alt="Rev. Patrick Ian Jackson">
+        <img src="../assets/patrick-portrait.webp" alt="Rev. Patrick Ian Jackson in a dark suit" width="700" height="814" fetchpriority="high" decoding="async">
         <span class="blob"></span>
       </div>
     </div>
   </div>
 </header>
 
+<main>
 <div class="creds">
   <div class="wrap">
     <span>Harvard, B.A.</span><span class="b">·</span>
@@ -295,6 +305,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <span class="brand serif">Patrick Ian Jackson</span>
