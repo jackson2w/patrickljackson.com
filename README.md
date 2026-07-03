@@ -41,4 +41,4 @@ npx wrangler pages deploy . --project-name patrickljackson-mockups
 The Cloudflare Pages project is named `patrickljackson-mockups` (project names can't be
 renamed) but is served at the custom domain below.
 
-Live: https://patrickljackson.com  (also https://patrickljackson-mockups.pages.dev)
+Live: https://patrickijackson.com  (also https://patrickljackson-mockups.pages.dev)
