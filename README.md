@@ -8,7 +8,7 @@ site, no build step. Warm & personal design — Newsreader/Public Sans, terracot
 | Path | Purpose |
 |------|---------|
 | `index.html` | The single-page site (hero, mission, work, writing, sermons, about, contact) |
-| `assets/` | Portrait (`.webp`), social share image (`og.webp`), source JPGs |
+| `assets/` | Portrait (`.webp`), social share image (`og.jpg`), source JPGs |
 | `_headers` | Cloudflare Pages edge caching + security headers |
 
 ## Optimizations applied
@@ -19,7 +19,7 @@ site, no build step. Warm & personal design — Newsreader/Public Sans, terracot
   (700×814, q80, ~86 KB); explicit `width`/`height` to prevent layout shift;
   `fetchpriority="high"` on the LCP hero; baseline `img { height: auto; }`.
 - **SEO / social** — `description`, `canonical`, and Open Graph tags with a
-  1200×630 `og.webp` share image.
+  1200×630 `og.jpg` share image.
 - **Semantic HTML** — `<main>` landmark, single `<h1>`, descriptive `alt` text.
 - **Edge headers** — immutable caching on `/assets/*`, security headers on HTML.
 
