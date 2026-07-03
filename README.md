@@ -38,4 +38,7 @@ to `main` via GitHub Actions (`.github/workflows/deploy.yml`). Manual deploy:
 npx wrangler pages deploy . --project-name patrickljackson-mockups
 ```
 
-Live: https://patrickljackson-mockups.pages.dev
+The Cloudflare Pages project is named `patrickljackson-mockups` (project names can't be
+renamed) but is served at the custom domain below.
+
+Live: https://patrickljackson.com  (also https://patrickljackson-mockups.pages.dev)
